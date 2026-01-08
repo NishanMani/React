@@ -10,7 +10,15 @@ function Course({ name, sentence, price, img, onDelete }) {
   }
 
   useEffect(() => {
-    console.log('inside course use effect')})
+    console.log('inside course use effect')
+    fetch('https://jsonplaceholder.typicode.com/albums')
+      .then(response => {console.log(response)
+        return response.json()})
+      .then(data => {
+        console.log(data)
+      })
+
+  },[])
 
   return (
     <div className="card">
